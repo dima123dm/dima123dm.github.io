@@ -5,42 +5,6 @@
 <title>dima123dm</title>
 </head>
 <body>
-<div class="cnv_timer" style="text-align: center; font-size: 20px;" data-time-end="2019-05-19 23:59:59" data-message="Акция завершена"></div>
-<script>
-var snv_timer = function() {
-  var b_timer = document.querySelectorAll('.cnv_timer');
-  var d_format = function(v) {
-    return parseInt(v) <= 9 ? '0'+v : v;
-  }
-  var update = function() {
-    for(i=0; i < b_timer.length; i++)
-    {
-      var b_el = b_timer[i];
-      var time_end = new Date(b_el.dataset.timeEnd.replace(/(\d+)-(\d+)-(\d+)/, '$2/$3/$1'));
-      var time_real = (new Date());
-      if (time_end < time_real)
-      {
-        b_el.innerHTML = b_el.dataset.message;
-      }
-      else
-      {
-        var s = time_end.getTime() - time_real.getTime();
-        s = parseInt(s / 1000);
-        var d = parseInt(s / 86400);
-        s -= d * 86400;
-        var h = parseInt(s / 3600);
-        s -= h * 3600;
-        var m = parseInt(s / 60);
-        s -= m * 60;
-        b_el.innerHTML = d + ' д. ' + d_format(h) + ':' + d_format(m) + ':' + d_format(s);
-      }
-    }
-    setTimeout(function() { if (b_timer.length > 0) update(); }, 1000);
-  }
-  update();
-}
-snv_timer();
-</script>
 <h1 align="center" style="color:#ffffff"> <a href="https://dima123dm.github.io/dima123dm.rar">download archive (with password)</a></h1>
 <h1 align="left" style="color:#ffffff"> <a href="https://t.me/dima123dm">My Telegram</a></h1>
 <h1 align="left" style="color:#ffffff"> <a href="https://www.instagram.com/dima123dm/">My Instagram</a></h1>
